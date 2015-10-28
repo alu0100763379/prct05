@@ -1,12 +1,9 @@
-#require "example/gcd.rb"
-
 class Fraccion
     attr_reader :num, :den
     
     def initialize(num, den)
         @num = num
         @den = den
-       # gcd(@num,@den) #Simplificamos la fracción
     end
     
     def to_s
