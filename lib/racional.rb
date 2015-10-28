@@ -20,4 +20,11 @@ class Fraccion
     def /(object)
         Fraccion.new(@num*object.den, @den*object.num)
     end
+    
+    def +(object)
+        mcm = @den.lcm(object.den)
+        num1 = (mcm * @num) / @den
+        num2 = (mcm * object.num) / object.den
+        Fraccion.new(num1+num2, mcm)
+    end
 end
