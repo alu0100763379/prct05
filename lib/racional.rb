@@ -16,4 +16,8 @@ class Fraccion
     def *(object)
         Fraccion.new(@num*object.num, @den*object.den)
     end
+    
+    def /(object)
+        Fraccion.new(@num*object.den, @den*object.num)
+    end
 end
